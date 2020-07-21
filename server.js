@@ -5,6 +5,8 @@ const app = express();
 //Connect Database
 connectDB();
 
+app.use(express.json({ extended: true }));
+
 app.get("/", (req, res) => {
   res.send("API Running Successfull");
 });
