@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 export default function DashboardActions() {
   return (
-    <div class="dash-buttons">
+    <div className="dash-buttons">
       <Link className="btn" to="/edit-profile">
         <i className="fas fa-user-circle text-primary"> Edit Profile</i>
       </Link>
