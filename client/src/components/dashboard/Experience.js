@@ -22,7 +22,7 @@ const Experience = ({ experience, deleteExperience }) => {
           onClick={() => deleteExperience(exp._id)}
           className="btn btn-danger"
         >
-          Delete
+          <i class="far fa-times-circle"></i> Delete
         </button>
       </td>
     </tr>
@@ -33,9 +33,16 @@ const Experience = ({ experience, deleteExperience }) => {
       <table className="table">
         <thead>
           <tr>
-            <th>Company</th>
-            <th className="hide-sm">Title</th>
-            <th className="hide-sm">Years</th>
+            <th>
+              <i class="fas fa-briefcase"></i> Company
+            </th>
+            <th className="hide-sm">
+              <i class="fas fa-book-open"></i> Title
+            </th>
+            <th className="hide-sm">
+              {" "}
+              <i class="fas fa-calendar-times"></i> Years
+            </th>
             <th></th>
           </tr>
         </thead>

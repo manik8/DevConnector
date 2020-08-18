@@ -1,10 +1,11 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
+  --primary-color: #5bd2ce;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
+  --profile-text: #171618;
 }
 
 * {
@@ -68,6 +69,10 @@ img {
 
 .text-primary {
   color: var(--primary-color);
+}
+
+.profile-text {
+  color: var(--profile-text);
 }
 
 .text-dark {
@@ -137,6 +142,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  border-radius: 12px;
 }
 
 .badge {
@@ -160,16 +166,17 @@ img {
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: var(--primary-color);
-  color: #fff;
+  background: #494e53;
+  color: white;
+  border-radius: 12px;
 }
 
 .btn-light,
 .bg-light,
 .badge-light,
 .alert-light {
-  background: var(--light-color);
-  color: #333;
+  background: aliceblue;
+  color: #10101c;
 }
 
 .btn-dark,
@@ -194,6 +201,11 @@ img {
 .alert-success {
   background: var(--success-color);
   color: #fff;
+}
+
+.landing-primary {
+  background: #5bd2ce;
+  border-radius: 12px;
 }
 
 .btn-white,
@@ -288,12 +300,18 @@ button {
   color: #0077b5;
 }
 
+.table {
+  width: 100%;
+}
 .table th,
 .table td {
   padding: 1rem;
   text-align: left;
 }
-
+.github-heading {
+  margin-left: 10%;
+  margin-top: 4%;
+}
 .table th {
   background: var(--light-color);
 }
@@ -333,7 +351,8 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  background: url("./img/showcase.jpg") no-repeat center center/cover;
+  background: url("https://www.electronicsb2b.com/wp-content/uploads/2017/05/electronics.png")
+    no-repeat center center/cover;
   height: 100vh;
 }
 
@@ -348,11 +367,13 @@ button {
   justify-content: center;
   text-align: center;
 }
-
+.contain {
+  display: flex;
+}
 /* Profiles Page */
 .profile {
   display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 2rem;
   padding: 1rem;
@@ -378,6 +399,13 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.profiles {
+  width: 80%;
+  margin-left: 12%;
+}
+.profile-text {
+  margin: auto;
 }
 
 .profile-top img {

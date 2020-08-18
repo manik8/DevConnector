@@ -13,21 +13,21 @@ const ProfileItem = ({
 }) => {
   return (
     <div className="profile bg-light">
-      <img className="rounf-img" src={avatar} />
-      <div>
+      <div className="profile-text">
         <h2>{name}</h2>
-        <p>
-          {status} {company && <span> at {company}</span>}
-        </p>
-        <p className="my-1">{location && <span>{location}</span>}</p>
+        <p>{status}</p>
+        <p> {company && <span> at {company}</span>}</p>
+        <p>{location && <span>{location}</span>}</p>
+        <br />
         <Link to={`/profile/${_id}`} className="btn btn-primary">
           View Profile
         </Link>
       </div>
-      <ul>
+      <img className="round-img" src={avatar} />
+      <ul className="profile-text">
         {skills.slice(0, 4).map((skill, index) => (
-          <li key={index} className="text-primary">
-            <i className="fas fa-check"></i> {skill}
+          <li key={index} className="profile-text">
+            <i className="fas fa-ribbon"></i> {skill}
           </li>
         ))}
       </ul>

@@ -14,7 +14,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
       <h2 className="text-primary my-1">Github Repos</h2>
       {repos.map((repo) => (
         <div key={repo.id} className="repo bg-white p-1 my-1">
-          <div>
+          <div className="github-heading">
             <h4>
               <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                 {repo.name}
@@ -22,7 +22,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
             </h4>
             <p>{repo.description}</p>
           </div>
-          <div>
+          <div style={{ marginRight: "10%" }}>
             <ul>
               <li className="badge badge-primary">
                 Stars: {repo.stargazers_count}
