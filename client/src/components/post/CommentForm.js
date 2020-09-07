@@ -16,7 +16,6 @@ const CommentForm = ({ postId, addComment }) => {
         onSubmit={(e) => {
           e.preventDefault();
           addComment(postId, { text });
-          setText("");
         }}
       >
         <textarea
